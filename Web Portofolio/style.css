@@ -1,0 +1,229 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #15223b;
+    color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    padding: 1em;
+    background: #15223b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    background-color: #f39c12;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero {
+    background-image: url('Asset/IMG/bgtextur.jpg');
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+#hero p {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2em;
+    max-width: 80%;
+}
+
+section {
+    min-height: 100vh; /* Menggunakan min-height agar konten yang tinggi tetap bisa bertambah */
+    width: 100%;
+    padding: 40px 10%;
+    text-align: center;
+}
+
+.profilepic {
+    width: 30vh;
+    height: 30vh;
+    background-color: white;
+    background-image: url("Asset/IMG/profilpic.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+#projects{
+	background-color:#516c9c;
+}
+.project_galery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+
+.project {
+    width: 90%;
+    max-width: 400px;
+    background: #15223b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+#projects h2{
+	text-align: center;
+	margin-top: -20px;
+	padding: auto;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    opacity: 70%;
+}
+
+.project a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project_icon {
+    width: 100%;
+    height: 200px;
+    background-image: url(Asset/IMG/bggame.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tablinks {
+	width: 46%;
+    background-color: #16213e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.tablinks:hover,
+.tablinks.active {
+    background-color: #f39c12;
+    color: #15223b;
+}
+
+.tabcontent {
+	overflow: auto;
+	margin: auto;
+	margin-top: -20px;
+    display: none;
+    padding: 20px;
+    background-color: #f39c12;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.tabcontent p {
+    color: #eaeaea;
+}
+.tabcontent.active {
+    display: block; /* Aktifkan tab yang dipilih */
+}
+
+footer {
+    background: #0f3460;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    #hero h2 {
+        font-size: 2.5em;
+    }
+    .project_galery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h2 {
+        font-size: 2em;
+    }
+    #hero p {
+        font-size: 1em;
+        max-width: 100%;
+    }
+    .profilepic {
+        width: 20vh;
+        height: 20vh;
+    }
+    .tablinks {
+        padding: 8px 15px;
+    }
+}
